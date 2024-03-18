@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden !important;
+  scroll-behavior: smooth;
+  /* text-align: center; */
+}
+
+.custom-slider .slick-prev:before,
+.custom-slider .slick-next:before {
+  color: #ffd500 !important;
+}
+
+.custom-slider .slick-prev {
+  top: 40px;
+  z-index: 1;
+  left: 90%;
+}
+
+.custom-slider .slick-next {
+  top: 40px;
+  z-index: 1;
+  left: 95%;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+.slick-dots li button:before {
+  color: #fff !important;
+}
+
+.unique-slider .slick-prev,
+.unique-slider .slick-next {
+  opacity: 0 !important;
+}
+
+.gradient {
+  /* background: rgb(0, 0, 0); */
+  background: rgba(234, 179, 8, 1);
+}
+
+/* responsive */
+
+@media only screen and (min-width: 1040px) and (max-width: 1100px) {
+}
+
+/* TOGGLE SWITCH CSS */
+
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition-duration: 0.5s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(168, 168, 168);
+  border-radius: 4px;
+}
+
+#bar2 {
+  transition-duration: 0.8s;
+}
+
+#bar1,
+#bar3 {
+  width: 70%;
+}
+
+#checkbox:checked + .toggle .bars {
+  position: absolute;
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: scaleX(0);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  width: 100%;
+  transform: rotate(45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  width: 100%;
+  transform: rotate(-45deg);
+  transition-duration: 0.5s;
+}
+
+#checkbox:checked + .toggle {
+  transition-duration: 0.5s;
+  transform: rotate(180deg);
+}
+
+/* HEADING TEXT CSS */
+
+/* === removing default button style ===*/
+.headingtext {
+  margin: 0;
+  height: auto;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+/* CONTACT BTn STYLES */
+
+.box {
+  width: 140px;
+  height: auto;
+  float: left;
+  transition: all 0.5s linear;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  margin: 0 5px;
+  background: transparent;
+  text-transform: uppercase;
+  font-weight: 900;
+  background-color: rgb(21, 21, 21);
+}
+
+.box:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  width: 100%;
+  border-bottom: 4px solid transparent;
+  border-left: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(100%);
+}
+
+.box:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  border-top: 4px solid transparent;
+  border-right: 4px solid transparent;
+  box-sizing: border-box;
+  transform: translateX(-100%);
+}
+
+.box:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+  background-color: transparent;
+  color: rgb(199, 187, 255);
+}
+
+.box:hover:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
+}
+
+.box:hover:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+
+/* NAV MENU OPEN AND ClOSE STYLES */
+
+.not-opened {
+  transform: translateX(-100%);
+}
+
+.opened {
+  transform: translateX(0%);
+}
+
+.hovering_on_title.box:before {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.3s;
+}
+
+.hovering_on_title.box {
+  color: #ae9cff;
+}
+
+.hovering_on_title.box:after {
+  border-color: #262626;
+  height: 100%;
+  transform: translateX(0);
+  transition: 0.3s transform linear, 0.3s height linear 0.5s;
+}
+
+.hovering_on_box.navheading {
+  text-shadow: 0px 0px 15px grey;
+}
+
+.hovering_on_box.navheading:after {
+  width: 100%;
+}
+
+.unique-slider {
+  transition: transform 1.5s ease-in-out;
+}
+
+.unique-slider:hover {
+  /* transform: scale(1.2); */
+}
+
+#swiperslide {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+  min-height: 70vh;
+  padding: 2rem 0;
+  /* background: white; */
+}
+
+.canvas {
+  position: relative;
+  height: 60rem;
+  /* width: 50vw; */
+  padding: 2rem 0;
+  /* background: red; */
+}

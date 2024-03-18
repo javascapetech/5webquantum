@@ -1,0 +1,109 @@
+.button-row {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    padding: 2%;
+    align-items: flex-start;
+    scale: 1.2;
+    left: 8%;
+    gap: 1rem;
+}
+
+@media (min-width: 220px) and (max-width: 360px) {
+    .button-row {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 2%;
+        align-items: flex-start;
+        scale: 0.8;
+        left: -13%;
+    }
+}
+
+
+.button-row::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 0.15rem solid black;
+    border-radius: 0.1rem;
+    border-bottom-width: 0;
+    border-right-width: 0;
+    pointer-events: none;
+
+}
+
+.dropdown:hover .category {
+    display: block;
+}
+
+.title {
+    background-color: transparent;
+    color: black;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: all 1s ease;
+}
+
+.title:hover {
+    background-color: #000000;
+    color: #ffa200;
+    transform: scale(1.1);
+    border-radius: 0;
+}
+
+.category {
+    display: block;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    color: black;
+    width: 100%;
+    box-sizing: border-box;
+    transition: opacity 0.2s ease;
+    pointer-events: none;
+    text-align: center;
+    
+}
+
+.dropdown:hover .category {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.category a {
+    display: block;
+    color: black;
+    background-color: transparent;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: background-color 0.5s linear;
+}
+
+.category a:hover {
+    background-color: #ffffff;
+    color: black;
+}
+
+.traditional-css-equivalent {
+    display: flex;
+    font-size: 1.125rem;
+    font-size: 1.7rem;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 1.25rem;
+    color: black;
+}
+
+@media (min-width: 220px) and (max-width: 990px) {
+    .traditional-css-equivalent {
+        font-size: 1.2rem;
+    }
+}

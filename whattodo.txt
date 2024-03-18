@@ -1,0 +1,5 @@
+scroll animation,
+revolving elements,
+hover animation,
+pdf section hover ability and on click the pdf will open on new page,
+
